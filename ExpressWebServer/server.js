@@ -29,7 +29,8 @@ app.get("/", function(req, res) {
     res.status(404).send(myHomePage);
 });
 
-app.get("/render", function(req, res) {
+app.get("/render",
+    function(req, res) {
     var name = req.param("name");
     var id = req.param("id");
     res.render("home.jade", {
@@ -48,7 +49,7 @@ var authenticated = function(req, res, next) {
     };
 
 var authorized = function(req, res, next) {
-        if (req.param('user') !== config.authUser) {
+        if (req.param('user') !== "admin") {
             res.status(403).send("You must be an admin user");
         } else {
             next();
