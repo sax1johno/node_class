@@ -1,6 +1,7 @@
 var express = require('express'),
     app = express(),
-    config = require("./config.json");
+    config = require("./config.json"),
+    asyncforLoop = require("AsyncForLoop");
 
 app.set("views", "./views");
 
@@ -91,7 +92,7 @@ app.get("/users", function(req, res) {
         }
         ];
     res.send(users)
-})
+});
 
 app.get("/article/:id/:name", function(req, res) {
     var id = req.params.id;

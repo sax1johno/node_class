@@ -1,0 +1,20 @@
+{
+  "name": "express_server",
+  "version": "0.0.1",
+  "description": "test",
+  "main": "server.js",
+  "dependencies": {
+    "jade": "^1.11.0",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pm2 node server.js"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "me",
+  "license": "ISC"
+}
